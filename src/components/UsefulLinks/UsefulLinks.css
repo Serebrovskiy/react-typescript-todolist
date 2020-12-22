@@ -10,36 +10,103 @@
 }
 
 .useful-link__card {
+  width: 300px;
+  height: 115px;
+
+  padding: 24px;
   text-decoration: line-through;
+  text-decoration: none;
   /* max-width: 300px; */
   /* max-height: 400px; */
   /* margin-right: 30px; */
-  text-decoration: none;
+}
 
-  width: 300px;
-  height: 115px;
+.useful-link__card:hover {
+  /* transform: scale(1.05); */
+  transition: 0.5s ease-out;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .useful-link__card:last-child {
   margin-right: 0px;
 }
 
-.useful-link__image {
-  object-fit: cover;
-  /* max-height: 250px; */
-  max-height: 40px;
-  max-width: 40px;
-  margin-right: 10px;
+.useful-link__content {
+  /* position: relative; */
 }
 
-.useful-link__link {
-  width: 250px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-  overflow: hidden;
+.useful-link__remove-link {
+  position: absolute;
+  right: 14px;
+  top: 10px;
+  width: 16px;
+  height: 16px;
+  border: none;
+  background-image: url(../../images/menu-close-black.svg);
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+}
+
+.useful-link__remove-link:hover {
+  cursor: pointer;
+  opacity: 1;
+  right: 12px;
+  top: 8px;
+  width: 20px;
+  height: 20px;
+}
+
+.useful-link__remove-link:focus {
+  outline: none;
 }
 
 .useful-link__container {
   display: flex;
+  align-items: flex-end;
+}
+
+.useful-link__image {
+  object-fit: cover;
+  /* max-height: 250px; */
+  max-height: 16px;
+  max-width: 16px;
+  margin: 0 10px 5px 0;
+}
+
+.useful-link__title {
+  margin: 0px;
+  font-size: 22px;
+  line-height: 27px;
+
+  width: 230px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.useful-link__title:hover {
+  margin: 0px;
+  font-size: 22px;
+  line-height: 27px;
+
+  width: 230px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.useful-link__link {
+  width: 230px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  margin: 14px 0 0 4px;
 }

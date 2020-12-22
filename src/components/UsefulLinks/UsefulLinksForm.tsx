@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 interface UsefulLinksFormProps {
-  onAddUsefulLinks(link: string, title: string): void;
+  onAddUsefulLink(link: string, title: string): void;
 }
 
 export const UsefulLinksForm: React.FC<UsefulLinksFormProps> = (props) => {
@@ -19,7 +19,7 @@ export const UsefulLinksForm: React.FC<UsefulLinksFormProps> = (props) => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    props.onAddUsefulLinks(link, title);
+    props.onAddUsefulLink(link, title);
     setTitle('');
     setLink('');
   };
@@ -46,6 +46,7 @@ export const UsefulLinksForm: React.FC<UsefulLinksFormProps> = (props) => {
           value={title}
           onChange={changeHandlerTitle}
           placeholder="Введите название ссылки"
+          required
         />
         <label htmlFor="title" className="label active">
           Название ссылки
