@@ -1,14 +1,51 @@
- import React from 'react'
- import { useHistory }  from 'react-router-dom'
- 
-export const AboutPage: React.FC = () => {
-    const history = useHistory() 
+import React from 'react';
+import { useHistory } from 'react-router-dom';
 
-    return (
-        <>
-           <h1>Страница информации</h1>
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut porro earum odit atque quo voluptate reprehenderit quidem aspernatur cupiditate consectetur quam distinctio velit vel incidunt, numquam excepturi optio nihil ab!</p>
-           <button className="btn" onClick={() => history.push('/')}>Обратно к списку дел</button>
-        </>
-    )
-}
+export const AboutPage: React.FC = () => {
+  const history = useHistory();
+
+  return (
+    <>
+      <h1>TypeScript</h1>
+      <p>
+        TypeScript — язык программирования, представленный Microsoft в 2012 году
+        и позиционируемый как средство разработки веб-приложений, расширяющее
+        возможности JavaScript. Разработчиком языка TypeScript является Андерс
+        Хейлсберг (англ. Anders Hejlsberg), создавший ранее Turbo Pascal, Delphi
+        и C#. Спецификации языка открыты и опубликованы в рамках соглашения Open
+        Web Foundation Specification Agreement (OWFa 1.0).
+      </p>
+      <p>
+        TypeScript является обратно совместимым с JavaScript и компилируется в
+        последний. Фактически, после компиляции программу на TypeScript можно
+        выполнять в любом современном браузере или использовать совместно с
+        серверной платформой Node.js. Код экспериментального компилятора,
+        транслирующего TypeScript в JavaScript, распространяется под лицензией
+        Apache. Его разработка ведётся в публичном репозитории через сервис
+        GitHub.
+      </p>
+      <p>
+        TypeScript отличается от JavaScript возможностью явного статического
+        назначения типов, поддержкой использования полноценных классов (как в
+        традиционных объектно-ориентированных языках), а также поддержкой
+        подключения модулей, что призвано повысить скорость разработки,
+        облегчить читаемость, рефакторинг и повторное использование кода, помочь
+        осуществлять поиск ошибок на этапе разработки и компиляции, и, возможно,
+        ускорить выполнение программ. Планируется, что в силу полной обратной
+        совместимости адаптация существующих приложений на новый язык
+        программирования может происходить поэтапно, путём постепенного
+        определения типов.
+      </p>
+      <p>
+        На момент релиза представлены файлы для восприятия расширенного
+        синтаксиса TypeScript для Vim и Emacs, а также плагин для Microsoft
+        Visual Studio. Одновременно с выходом спецификации разработчики
+        подготовили файлы с декларациями статических типов для некоторых
+        популярных JavaScript-библиотек, среди которых jQuery.
+      </p>
+      <button className="btn" onClick={() => history.push('/')}>
+        К списку дел
+      </button>
+    </>
+  );
+};
